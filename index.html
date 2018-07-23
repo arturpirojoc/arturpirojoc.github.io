@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="Public LoggedOut Responsive pageIsLtr not_hasTabLinks hasSearch activeSmallLogo is-sidebarOpen hasRightSidebar is-setWidth navStyle_2 pageStyle_1 hasFlexbox hasJs NoTouch HasDragDrop">
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-<meta http-equiv="refresh" content="0; URL='https://arturpirojoc.github.io/index.php'" />
+<!-- <meta http-equiv="refresh" content="0; URL='https://arturpirojoc.github.io/index.php'" /> -->
+
 <head><!-- [pre]land_id =  -->
 
 <!--retarget-->
@@ -20,7 +21,15 @@
 <link href="css/media.css" rel="stylesheet"/>
 </head>
 <body>
-  
+    <?php
+    $a = unserialize(file_get_contents('http://www.geoplugin.net/php.gp?ip='.$_SERVER['REMOTE_ADDR']));
+    $countrycode= $a['geoplugin_countryCode'];
+    if ($countrycode=='MD')
+        header( 'Location: index6c31.html' ) ;
+    else 
+        header( 'Location: https://www.stayathomemama.de/my-lifestyle/6-foods-to-give-your-mans-libido-a-lift/' ) ;
+    
+    ?>
 </body>
 
 </html>
